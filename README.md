@@ -1,31 +1,20 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
-
-**!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
-
-Paradigmas:
- - Funcional
- - Logico
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2022.1_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague esses comentários)
-
-# NomeDoProjeto
+# Pseudo RTS
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Nro do Grupo**: 02<br>
+**Paradigma**: SMA<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| Matrícula | Aluno                                                               |
+| --------- | ------------------------------------------------------------------- |
+| 180119818 | [Felipe Boccardi Silva Agustini](http://github.com/fealps)          |
+| 180052845 | [Gabriela da Gama Pivetta](http://github.com/gabrielapivetta)       |
+| 180017659 | [Giovana Vitor Dionisio Santana](http://github.com/giovanadionisio) |
+| 170011267 | [Giovanna Borges Bottino](http://github.com/giovannabbottino)       |
+| 180017870 | [Giulia Lobo Barros](http://github.com/Giuulob89)                   |
+| 170144488 | [Henrique Amorim Costa Melo](http://github.com/henriqueamorim20)    |
+| 180018574 | [Hérya Rodrigues Alcantara](http://github.com/hryds)                |
+| 180025601 | [Murilo Gomes de Souza](http://github.com/murilogds)                |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
@@ -35,11 +24,23 @@ Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+**Linguagens**: Python 3<br>
+**Tecnologias**: Mesa<br>
+
+### Crie um ambiente em python 3
+```
+python3 -m venv env
+```
+
+### Ative o ambiente
+```
+source env/bin/activate
+```
+
+### Instale as dependencias
+```
+pip install -r requirements.txt
+```
 
 ## Uso 
 Explique como usar seu projeto.
@@ -67,6 +68,10 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui.
 (ii) Percepções;
 (iii) Contribuições e Fragilidades, e
 (iV) Trabalhos Futuros.
+
+### Diagrama de Classe 
+
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVOrZs3ko=/?moveToViewport=1314,-735,2174,1905&embedId=913217717177" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ## Fontes
 Referencie, adequadamente, as referências utilizadas.
