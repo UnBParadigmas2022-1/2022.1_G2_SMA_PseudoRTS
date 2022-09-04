@@ -35,7 +35,7 @@ class AgenteColetor(Objeto, Agent):
             self.quantidade_pedra += self.recurso.valor
         elif (isinstance(self.recurso, Arvore)):
             self.quantidade_madeira += self.recurso.valor
-        self.model.recursos.remove(self.recurso)
+        self.model.mapa.get_recursos().remove(self.recurso)
         self.recurso = None
         self.is_coletando = False
         print(f'Recurso coletado:')
@@ -57,6 +57,6 @@ class AgenteColetor(Objeto, Agent):
             self.is_coletando = True
 
     def define_recurso(self):
-        if (len(self.model.recursos) > 0):
-            self.recurso = min(self.model.recursos, key=self.compara_distancia_para_recurso)
+        if (len(self.model.mapa.get_recursos()) > 0):
+            self.recurso = min(self.model.mapa.get_recursos(), key=self.compara_distancia_para_recurso)
             print(f'Posição do recurso [{self.recurso.x}, {self.recurso.y}]')

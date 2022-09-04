@@ -1,6 +1,5 @@
 from __future__ import annotations
 from .construcao import Construcao
-from random import randrange
 
 class Predio(Construcao):
 

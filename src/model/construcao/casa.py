@@ -1,7 +1,5 @@
 from __future__ import annotations
 from .construcao import Construcao
-from random import randrange
-
 class Casa(Construcao):
 
     def __init__(self: Casa, x: int = 0, y: int = 0) -> None:
