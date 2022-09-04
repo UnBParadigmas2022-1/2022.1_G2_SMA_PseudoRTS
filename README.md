@@ -42,6 +42,11 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+### Rode o programa
+```
+python src/__init__.py
+```
+
 ## Uso 
 Explique como usar seu projeto.
 Procure ilustrar em passos, com apoio de telas do software.
