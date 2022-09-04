@@ -53,6 +53,8 @@ class AgenteColetor(Objeto, Agent):
             self.y -= 1
         elif (self.x > self.recurso.x):
             self.x -= 1
+        self.model.grid.move_agent(self, (self.x, self.y))
+
         if (self.recurso.x == self.x and self.recurso.y == self.y):
             self.is_coletando = True
 

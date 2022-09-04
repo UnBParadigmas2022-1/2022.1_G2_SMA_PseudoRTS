@@ -5,7 +5,7 @@ from agent.modelo_coletor import ModeloColetor
 from agent.agente_mapa import AgenteMapa
 
 def agentPortrayal(agent):
-    portrayal = {"Shape": "circle",
+    portrayal = {"Shape": "assets/coletor.png",
                  "Filled": "true",
                  "Layer": 0,
                  "Color": "red",
@@ -22,3 +22,4 @@ server =  ModularServer(
 )
 
 server.port = 8521
+
