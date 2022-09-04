@@ -1,5 +1,6 @@
 from agent.modelo_agente import ModeloAgente
 from model.mapa import Mapa
+from canvas import server
 
 def run() -> None:
     mapa = Mapa(11, 11)
@@ -9,4 +10,4 @@ def run() -> None:
         modelo_agente.step()
 
 if __name__ == '__main__':
-    run()
+    server.launch()
