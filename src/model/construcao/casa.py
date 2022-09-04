@@ -5,4 +5,4 @@ from random import randrange
 class Casa(Construcao):
 
     def __init__(self: Casa, x: int = 0, y: int = 0) -> None:
-        super(Casa, self).__init__(2, 6, x, y)
+        super(Casa, self).__init__(2, 4, x, y)
