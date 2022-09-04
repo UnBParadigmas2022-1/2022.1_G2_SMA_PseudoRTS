@@ -4,17 +4,12 @@ import mesa
 from agent.agente_coletor import AgenteColetor
 from agent.agente_construtor import AgenteConstrutor
 from agent.agente_mapa import AgenteMapa
-from utils.utils import posicao_aleatoria
-from random import randrange
+from utils.utils import genPos
 from mesa.space import MultiGrid
 
-def genPos():
-    x = randrange(10)
-    y = randrange(10)
-    return x, y
 
 class ModeloAgente(Model):
-    def __init__(self, num_agentes_coletor: int = 2, num_agentes_construtor: int = 2) -> None:
+    def __init__(self, num_agentes_coletor: int = 1, num_agentes_construtor: int = 2) -> None:
         self.num_agentes_coletor = num_agentes_coletor
         self.num_agentes_construtor = num_agentes_construtor
 
@@ -46,3 +41,13 @@ class ModeloAgente(Model):
 
     def step(self) -> None:
         return self.schedule.step()
+
+    def get_material_coletor(self):
+        madeira_final = 0
+        pedra_final = 0
+        for agente in self.schedule.agent_buffer():
+            if isinstance(agente, AgenteColetor) and not isinstance(agente, AgenteConstrutor):
+                madeira, pedra = agente.coleta_material()
+                madeira_final += madeira
+                pedra_final += pedra
+        return madeira_final, pedra_final

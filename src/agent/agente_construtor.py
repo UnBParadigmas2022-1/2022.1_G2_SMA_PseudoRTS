@@ -4,7 +4,6 @@ from .agente_coletor import AgenteColetor
 from mesa import Model
 from math import sqrt
 
-from model.construcao.construcao import Construcao
 from model.construcao.casa import Casa
 from model.construcao.predio import Predio
 
@@ -23,7 +22,7 @@ class AgenteConstrutor(AgenteColetor):
         elif not isinstance(self.material_construcao(), type(None)):
             self.anda_local_vazio(1)
         else:
-            self.comportamento_coletor()
+            self.get_material_disponivel()
 
     def comportamento_coletor(self: AgenteConstrutor) -> None:
         if (self.is_coletando):
@@ -32,6 +31,11 @@ class AgenteConstrutor(AgenteColetor):
             self.anda()
         else:
             self.define_recurso()
+
+    def get_material_disponivel(self):
+        madeira, pedra = self.model.get_material_coletor()
+        self.quantidade_madeira += madeira
+        self.quantidade_pedra += pedra
 
     def anda_local_vazio(self: AgenteConstrutor, soma: int) -> None:
         if self.model.mapa.is_posicao_vazia(self.x, self.y):
