@@ -1,3 +1,5 @@
+from agent.agente_coletor import AgenteColetor
+from agent.agente_construtor import AgenteConstrutor
 from mesa.visualization.modules import CanvasGrid
 from mesa.visualization.ModularVisualization import ModularServer
 from mesa.visualization.UserParam import UserSettableParameter
@@ -6,11 +8,18 @@ from model.mapa import Mapa
 
 
 def agentPortrayal(agent):
-    portrayal = {"Shape": "assets/coletor.png",
-                 "Filled": "true",
-                 "Layer": 0,
-                 "Color": "red",
-                 "r": 0.5}
+    if type(agent) is AgenteColetor: 
+        portrayal = {"Shape": "assets/coletor.png",
+                    "Filled": "true",
+                    "Layer": 0,
+                    "Color": "red",
+                    "r": 0.5}
+    elif type(agent) is AgenteConstrutor:
+        portrayal = {"Shape": "assets/construtor.png",
+                    "Filled": "true",
+                    "Layer": 0,
+                    "Color": "red",
+                    "r": 0.5}
     return portrayal
 
 canvas_element = CanvasGrid(agentPortrayal, 10, 10, 500, 500)
