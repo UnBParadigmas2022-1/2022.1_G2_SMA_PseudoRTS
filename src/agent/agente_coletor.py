@@ -22,7 +22,7 @@ class AgenteColetor(Objeto, Agent):
     def compara_distancia_para_recurso(self, recurso: Natural):
         return sqrt((self.x - recurso.x)**2+(self.y - recurso.y)**2)
 
-    def step(self) -> None:
+    def step(self: AgenteColetor) -> None:
         if (self.is_coletando):
             self.coleta()
         elif (self.recurso != None):
@@ -30,21 +30,25 @@ class AgenteColetor(Objeto, Agent):
         else:
             self.define_recurso()
 
-    def coleta(self) -> None:
-        if (isinstance(self.recurso, Pedra)):
-            self.quantidade_pedra += self.recurso.valor
-        elif (isinstance(self.recurso, Arvore)):
-            self.quantidade_madeira += self.recurso.valor
-        self.model.mapa.get_recursos().remove(self.recurso)
+    def coleta(self: AgenteColetor) -> None:
+        if self.recurso in self.model.mapa.get_recursos():
+            if (isinstance(self.recurso, Pedra)):
+                self.quantidade_pedra += self.recurso.valor
+            elif (isinstance(self.recurso, Arvore)):
+                self.quantidade_madeira += self.recurso.valor
+            print(f'Agente {self.unique_id} Recurso coletado:')
+            print(f'Agente {self.unique_id} Quantidade de madeira atual: {self.quantidade_madeira}')
+            print(f'Agente {self.unique_id} Quantidade de pedra atual: {self.quantidade_pedra}')
+            self.model.mapa.remove_recursos(self.recurso)
+            
+        else:
+            print(f'Agente {self.unique_id} Roubaram meu recurso!')
         self.recurso = None
         self.is_coletando = False
-        print(f'Recurso coletado:')
-        print(f'Quantidade de madeira atual: {self.quantidade_madeira}')
-        print(f'Quantidade de pedra atual: {self.quantidade_pedra}')
 
 
-    def anda(self):
-        print(f'ANDANDO! Posição atual [{self.x}, {self.y}]')
+    def anda(self: AgenteColetor) -> None:
+        print(f'Agente {self.unique_id} ANDANDO! Posição atual [{self.x}, {self.y}]')
         if (self.x < self.recurso.x):
             self.x += 1
         elif (self.y < self.recurso.y):
@@ -56,7 +60,15 @@ class AgenteColetor(Objeto, Agent):
         if (self.recurso.x == self.x and self.recurso.y == self.y):
             self.is_coletando = True
 
-    def define_recurso(self):
+    def define_recurso(self: AgenteColetor) -> None:
         if (len(self.model.mapa.get_recursos()) > 0):
             self.recurso = min(self.model.mapa.get_recursos(), key=self.compara_distancia_para_recurso)
-            print(f'Posição do recurso [{self.recurso.x}, {self.recurso.y}]')
+            print(f'Agente {self.unique_id} Posição do recurso [{self.recurso.x}, {self.recurso.y}]')
+
+    def get_material(self: AgenteColetor) -> [int, int]:
+        return self.quantidade_madeira, self.quantidade_pedra
+
+    def coleta_material(self: AgenteColetor) ->[ int, int]:
+        self.quantidade_madeira = 0
+        self.quantidade_pedra = 0
+        return self.quantidade_madeira, self.quantidade_pedra
