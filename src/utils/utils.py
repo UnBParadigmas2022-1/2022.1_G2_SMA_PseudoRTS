@@ -1,4 +1,4 @@
 import random
 
-def posicao_aleatoria():
-    return random.randint(0, 10)
+def posicao_aleatoria(begin: int, end: int) -> int:
+    return random.randint(begin, end)

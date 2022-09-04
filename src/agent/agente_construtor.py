@@ -53,6 +53,7 @@ class AgenteConstrutor(AgenteColetor):
             self.y += soma
         else: 
             self.anda_local_vazio(soma + 1)
+        self.model.grid.move_agent(self, (self.x, self.y))
 
         if soma >= 4:
             print(f'Agente {self.unique_id} Você esta sem local!')
