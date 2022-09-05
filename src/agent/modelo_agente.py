@@ -21,6 +21,9 @@ class ModeloAgente(Model):
         self.mapa = AgenteMapa(0, self, 10, 10)
         self.mapa.preenche_mapa(5)
 
+        self.madeira_total = 0;
+        self.pedra_total = 0;
+
         for i in range(1, num_agentes_coletor + 1):
             x, y = genPos()
             while (x,y) in self.filledPositions:
@@ -50,4 +53,9 @@ class ModeloAgente(Model):
                 madeira, pedra = agente.coleta_material()
                 madeira_final += madeira
                 pedra_final += pedra
+                self.madeira_total += madeira
+                self.pedra_total += pedra
         return madeira_final, pedra_final
+
+    def get_total_recursos(self):
+        return self.madeira_total, self.pedra_total
