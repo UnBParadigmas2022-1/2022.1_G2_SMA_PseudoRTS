@@ -7,7 +7,7 @@ from model.natural.natural import Natural
 from model.natural.pedra import Pedra
 from model.natural.arvore import Arvore
 
-class AgenteColetor(Objeto, Agent):
+class AgenteColetor(Objeto):
     recurso: Natural
 
     def __init__(self: AgenteColetor, unique_id: int, model: "Model", x: int = 0, y: int = 0) -> None:
@@ -67,10 +67,9 @@ class AgenteColetor(Objeto, Agent):
             self.recurso = min(self.model.mapa.get_recursos(), key=self.compara_distancia_para_recurso)
             print(f'Agente {self.unique_id} Posição do recurso [{self.recurso.x}, {self.recurso.y}]')
 
-    def get_material(self: AgenteColetor) -> [int, int]:
-        return self.quantidade_madeira, self.quantidade_pedra
-
     def coleta_material(self: AgenteColetor) ->[ int, int]:
+        madeira = self.quantidade_madeira
+        pedra = self.quantidade_pedra
         self.quantidade_madeira = 0
         self.quantidade_pedra = 0
-        return self.quantidade_madeira, self.quantidade_pedra
+        return madeira, pedra

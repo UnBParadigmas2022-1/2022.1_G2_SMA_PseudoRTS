@@ -1,4 +1,6 @@
-import random
+from random import randrange
 
-def posicao_aleatoria():
-    return random.randint(0, 10)
+def genPos():
+    x = randrange(10)
+    y = randrange(10)
+    return x, y
