@@ -90,8 +90,5 @@ As fragilidades do projeto podem ser vistas principalmente se houver mais de um 
 
 Uma evolução possivel do trabalho é melhorar a parte comportamental dos agentes e a criação de um agente Jogador, onde seria possivel instruir aos coletores o que eles deveriam coletar e aos coletores oque deveriam construir, além disso seria necessário fazer com que os recursos disponiveis no mapa fossem gerados novamente quando os existentes se esgotassem.
 
-### Diagrama de Classe 
-
-
 ## Fontes
  * Documentação do MESA: https://mesa.readthedocs.io/en/latest/
