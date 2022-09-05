@@ -63,21 +63,33 @@ TEMPO: +/- 15min
 
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
-|Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
-| -- | -- | -- |
-| Fulano  |  Programação dos Fatos da Base de Conhecimento Lógica | Boa |
+|           Nome do Membro             | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
+| ------------------------------------ | ---------------------------------- | ---------- |
+|   Felipe Boccardi Silva Agustini     | Agente Construtor                  | Execelente |
+|   Gabriela da Gama Pivetta           | Agente Mapa                        | Execelente |
+|   Giovana Vitor Dionisio Santana     | Interface                          | Execelente |
+|   Giovanna Borges Bottino            | Agente Construtor                  | Execelente |
+|   Giulia Lobo Barros                 | Agente Coletor                     | Execelente |
+|   Henrique Amorim Costa Melo         | -                                  |    Nula    |
+|   Hérya Rodrigues Alcantara          | Interface                          | Execelente |
+|   Murilo Gomes de Souza              | Agente Coletor & Agente Mapa       | Execelente |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui.
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
+
+### I. Lições Aprendidas
+
+O paradigma multiagentes trouxe uma visão diferente da programação convencional, e sua abstração não foi uma tarefa trivial no contexto que propomos, criar uma Jogo de estratégia em tempo real, pois tivemso que lidar com limitação da nossas ferramentas e conhecimentos, abrindo mão da existencia de um "Jogador" para tranformar o jogo em uma simulação de coleta de recursos e construção de cidades. E nossa falta de conhecimento se provou um empecilho quando trabalhando com mesa, já que não conseguimos usar todo o potencial da ferramenta o que se mostra na nossa tentativa de ao tentar criar um codigo mais voltado a comportamento acabamos em um sistema mais voltado a orientação a objetos.
+### II. Percepções
+
+### III. Contribuições e Fragilidades
+As fragilidades do projeto podem ser vistas principalmente se houver mais de um coletor, pois como eles possuem um mesmo comportamento, os agentes tentam coletar o mesmo recurso, Além disso o codigo possui um viés muito forte no paradigma de orientação a objetos, o que gostariamos de ter evitado mais.
+### IV. Trabalhos Futuros
+
+Uma evolução possivel do trabalho é melhorar a parte comportamental dos agentes e a criação de um agente Jogador, onde seria possivel instruir aos coletores o que eles deveriam coletar e aos coletores oque deveriam construir, além disso seria necessário fazer com que os recursos disponiveis no mapa fossem gerados novamente quando os existentes se esgotassem.
 
 ### Diagrama de Classe 
 
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVOrZs3ko=/?moveToViewport=1314,-735,2174,1905&embedId=913217717177" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda, fontes de leitura complementares.
+ * Documentação do MESA: https://mesa.readthedocs.io/en/latest/
