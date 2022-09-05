@@ -48,9 +48,12 @@ python src/__init__.py
 ```
 
 ## Uso 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software.
+Para usar o projeto é simples! Depois que forem feitos os passos listados no tópico acima basta clicar em start na pagina q foi aberta no navegador 
+![coletor e recursos](./assets/1.jpeg)
 
+![costrutor e construções](./assets/2.jpeg)
+
+![simulação](./assets/3.gif)
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
 Procure: 
@@ -80,7 +83,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 
 O paradigma multiagentes trouxe uma visão diferente da programação convencional, e sua abstração não foi uma tarefa trivial no contexto que propomos, criar uma Jogo de estratégia em tempo real, pois tivemso que lidar com limitação da nossas ferramentas e conhecimentos, abrindo mão da existencia de um "Jogador" para tranformar o jogo em uma simulação de coleta de recursos e construção de cidades. E nossa falta de conhecimento se provou um empecilho quando trabalhando com mesa, já que não conseguimos usar todo o potencial da ferramenta o que se mostra na nossa tentativa de ao tentar criar um codigo mais voltado a comportamento acabamos em um sistema mais voltado a orientação a objetos.
 ### II. Percepções
-
+Percebemos que os vicios de OO são muito fortes e quando trabalhamos com uma linguagem mais maleável nós nos recorremos a algo conhecido para solucionar problema obtidos. Apesar disso, no nosso uso de SMA foi possivel perceber que o paradigma é bom para simulações e entedimento de contextos.
 ### III. Contribuições e Fragilidades
 As fragilidades do projeto podem ser vistas principalmente se houver mais de um coletor, pois como eles possuem um mesmo comportamento, os agentes tentam coletar o mesmo recurso, Além disso o codigo possui um viés muito forte no paradigma de orientação a objetos, o que gostariamos de ter evitado mais.
 ### IV. Trabalhos Futuros
@@ -88,8 +91,6 @@ As fragilidades do projeto podem ser vistas principalmente se houver mais de um 
 Uma evolução possivel do trabalho é melhorar a parte comportamental dos agentes e a criação de um agente Jogador, onde seria possivel instruir aos coletores o que eles deveriam coletar e aos coletores oque deveriam construir, além disso seria necessário fazer com que os recursos disponiveis no mapa fossem gerados novamente quando os existentes se esgotassem.
 
 ### Diagrama de Classe 
-
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVOrZs3ko=/?moveToViewport=1314,-735,2174,1905&embedId=913217717177" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ## Fontes
  * Documentação do MESA: https://mesa.readthedocs.io/en/latest/
