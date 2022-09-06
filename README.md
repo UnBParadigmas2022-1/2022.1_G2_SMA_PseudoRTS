@@ -24,7 +24,7 @@ Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: Python 3<br>
+**Linguagens**: Python a partir da versão 3.7<br>
 **Tecnologias**: Mesa<br>
 
 ### Crie um ambiente em python 3
@@ -43,8 +43,9 @@ pip install -r requirements.txt
 ```
 
 ### Rode o programa
+Dentro da pasta ```src``` execute o comando
 ```
-python src/__init__.py
+python __init__.py
 ```
 
 ## Uso 
