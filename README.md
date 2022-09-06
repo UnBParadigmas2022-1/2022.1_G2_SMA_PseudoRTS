@@ -17,6 +17,7 @@
 | 180025601 | [Murilo Gomes de Souza](http://github.com/murilogds)                |
 
 ## Sobre 
+<<OBS: Não especificado no Prazo - Profa. Milene>>
 Descreva o seu projeto em linhas gerais. 
 Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
 
