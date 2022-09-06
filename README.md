@@ -21,7 +21,7 @@ Descreva o seu projeto em linhas gerais.
 Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+Apresentados na seção [**Uso**](https://github.com/UnBParadigmas2022-1/2022.1_G2_SMA_PseudoRTS#uso)
 
 ## Instalação 
 **Linguagens**: Python a partir da versão 3.7<br>
